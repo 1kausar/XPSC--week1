@@ -5,22 +5,24 @@ int main()
     int t; cin>>t;
     while(t--)
     {
-        set<char>s;
-        string str; cin>>str;
-        for(int i=0 ; i<str.size(); i++)
-        {
-            s.insert(str[i]);
-        }
-        cout<<"size is:"<<s.size()<<endl;
+        string s; cin>>s;
 
-        if(!(s.size()%3))
+        int cnt=0;
+        for(int i=0 ; i<s.size() ; i++)
         {
-            cout<<s.size()/3<<endl;
+            set<char>st;
+            st.insert(s[i]);
+            while(st.size()<=3)
+            {
+                i++;
+                st.insert(s[i]);
+            }
+            if(st.size()<=4)
+            {
+                cnt++;
+                i--;
+            }
         }
-        else
-        {
-            cout<<(s.size()/3)+1<<endl;
-        }
+        cout<<cnt<<endl;
     }
-    return 0;
 }

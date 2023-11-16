@@ -1,19 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+ll main()
 {
-    int t; cin>>t;
+    ll t; cin>>t;
     while(t--)
     {
-        int n; cin>>n;
-        int sum=0;
-        vector<int>v={9,8,7,6,5,4,3,2,1};
-        vector<int>ans;
+        ll n; cin>>n;
+        ll sum=0;
+        vector<ll>v={9,8,7,6,5,4,3,2,1};
+        vector<ll>ans;
         if(n>9)
         {
             sum+=v[0];
             ans.push_back(v[0]);
-            for(int i=1 ; i<=8 ; i++)
+            for(ll i=1 ; i<=8 ; i++)
             {
 
                 if(sum<n)
