@@ -5,10 +5,10 @@ int main()
     int t; cin>>t;
     while(t--)
     {
-        int r,b;
-        cin>>r>>b;
+        int x,y;
+        cin>>x>>y;
 
-        if(r<=(b*36)) cout<<"YES"<<endl;
+        if(x+y>6) cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }
 }
